@@ -1,0 +1,630 @@
+html {
+	height: 100%;
+}
+
+body {
+	font-family: serif;
+	font-size: 18px;
+	line-height: 1.5;
+	margin: 5px 10px 5px 10px; 
+	border: 5px;
+	padding: 5px;
+	background: #FFF;
+	min-height: 100%;
+}
+
+#mainContainer {
+	padding: 0;
+}
+
+.hide {
+	display: none;
+}
+
+/*-------------------MAIN--------------------*/
+/*------------------Gorilla-----------------*/
+/*-----------------Animation-----------------*/
+
+#gorillaAnimation {
+	width: 500px;
+	height: 580px;
+	background: url(../animation/gorillaAnimationOpt.jpg) 0 0 no-repeat;
+	margin: 0 auto;
+	position: relative;
+	background-size: cover;
+}
+
+/*-------------------Overlays--------------------*/
+/*------------------Check Boxes----------------*/
+/*---------------------and--------------------*/
+/*--------------------Sprites--------------------*/
+
+#skull, #mouth, #ribCage, #hips, #hands {
+	position: absolute;
+	width: 500px;
+	height: 580px;
+	margin: 0 auto;
+	visibility: hidden;
+}
+
+#skull {
+	background: url(../animation/fedoraAnimationOpt.png) 0 0 no-repeat;
+	background-size: cover;
+	height: 120px;
+}
+
+#mouth {
+	background: url(../animation/longCigaretteAnimationOpt.png) 0 0 no-repeat;
+	background-size: cover;
+	top: 110px;
+	height: 44px;
+}
+
+#ribCage {
+	background: url(../animation/redStripeTieAnimationOpt.png) 0 0 no-repeat;
+	background-size: cover;
+	top: 120px;
+	height: 250px;
+}
+
+#hips {
+	background: url(../animation/gunBeltAnimationOpt.png) 0 0 no-repeat;
+	background-size: cover;
+	top: 260px;
+	height: 141px;
+}
+
+#hands {
+	background: url(../animation/boxingGlovesAnimationOpt.png) 0 0 no-repeat;
+	background-size: cover;
+	top: 250px;
+	height: 251px;
+}
+
+input#skullCheck[type=checkbox] {
+	top: 25px;
+	left: 28%;
+	z-index: 100;
+	width: 200px;
+	height: 50px;
+	position: absolute;  
+   	opacity: 0;
+}
+
+input#skullCheck[type=checkbox]:checked ~ #skull {
+   visibility: visible;
+}
+
+input#mouthCheck[type=checkbox] {
+	top: 70px;
+   	left: 30%;
+   	z-index: 100;
+   	width: 180px;
+   	height: 50px;
+   	position: absolute;  
+   	opacity: 0;
+}
+
+input#mouthCheck[type=checkbox]:checked ~ #mouth {
+   	visibility: visible;
+}
+
+input#ribCageCheck[type=checkbox] {
+   	top: 135px;
+   	left: 30%;
+   	z-index: 100;
+   	width: 180px;
+   	height: 120px;
+   	position: absolute;  
+   	opacity: 0;
+}
+
+input#ribCageCheck[type=checkbox]:checked ~ #ribCage {
+   	visibility: visible;
+}
+
+input#hipsCheck[type=checkbox] {
+   	top: 270px;
+   	left: 35%;
+   	z-index: 100;
+   	width: 140px;
+   	height: 70px;
+   	position: absolute;  
+   	opacity: 0;
+}
+
+input#hipsCheck[type=checkbox]:checked ~ #hips {
+   	visibility: visible;
+}
+
+input#handsCheck[type=checkbox] {
+   	top: 320px;
+   	left: 10%;
+   	z-index: 100;
+   	width: 100px;
+   	height: 140px;
+   	position: absolute;  
+   	opacity: 0;
+}
+
+input#handsCheck[type=checkbox]:checked ~ #hands {
+   	visibility: visible;
+}
+
+/*-------------------Labels--------------------*/
+/*--------------------Text-------------------*/
+
+
+h1 {
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: center;
+	color: #000;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+
+hr {
+	margin-top:0;
+	margin-bottom: 0;
+	margin-left: auto;
+	margin-right: auto;
+	width: 75%;
+}
+
+h4 {
+	font-style: italic;
+	font-size: 14px;
+	font-weight: normal;
+	text-align: center;
+	color: #000;
+	text-transform: lowercase;
+	letter-spacing: 4px;
+	margin-top: 4px;
+	margin-bottom: 14px;
+}
+
+.spacing {
+	letter-spacing: 10px;
+}
+
+.english-right {
+	display: block;
+	font-size: 16px;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: center;
+	color: #000;
+	margin:0;
+	text-decoration: none;
+}
+
+.right {
+	margin-top:0;
+	margin-bottom: 0;
+	margin-left: auto;
+	margin-right: auto;
+	width: 75%;
+}
+
+.latin-right {
+	display: block;
+	font-style: italic;
+	font-size: 12px;
+	text-align: center;
+	color: #000;
+	text-transform: lowercase;
+	letter-spacing: 4px;
+	margin-top: 2px;
+	text-decoration: none;
+}
+
+.english-left {
+	display: block;
+	font-size: 16px;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: center;
+	color: #000;
+	margin:0;
+	text-decoration: none;
+}
+
+.left {
+	margin-top:0;
+	margin-bottom: 0;
+	margin-left: auto;
+	margin-right: auto;
+	width: 75%;
+}
+
+.latin-left {
+	display: block;
+	font-style: italic;
+	font-size: 12px;
+	text-align: center;
+	color: #000;
+	text-transform: lowercase;
+	letter-spacing: 4px;
+	margin-top: 2px;
+	text-decoration: none;
+}
+
+#diagram {
+	width: 260px;
+	height: 570px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0;
+}
+
+/*---------------------Labels--------------------*/
+/*--------------------Animations-------------------*/
+/*--------------------Home Page-------------------*/
+
+#aboutBox {
+	position: absolute;
+	display: block;
+	left: 50%; 
+	top: 130px;
+	margin-left: 80px;
+	/*animation: aboutBonk 1.419s infinite;*/
+}
+
+/*@keyframes aboutBonk {
+	0%, 32%, 100% {
+    margin-left: 80px;
+  }
+  66.6% {
+    margin-left: 90px;
+  }
+} */
+
+#portfolioBox {
+	position: absolute;
+	display: block;
+	right: 50%; 
+	top: 230px;
+	margin-right: 130px;
+	/*animation: portfolioShove 1.419s infinite;*/
+}
+
+/*@keyframes portfolioShove {
+	0% {
+	margin-right: 119px
+	}
+	33% {
+    margin-right: 100;
+  	}
+  	66% {
+    margin-right: 100px;
+  	}
+	100% {
+	margin-right: 120px;
+	}
+} */
+
+#highFiveBox {
+	position: absolute;
+	display: block;
+	left: 50%; 
+	top: 400px;
+	margin-left: 140px;
+	/*animation: skillPunch 1.419s infinite;*/
+}
+
+/*@keyframes skillPunch {
+	0% {
+	margin-left: 169px
+	}
+	33% {
+    margin-left: 140px;
+  	}
+  	66% {
+    margin-left: 140px;
+  	}
+	100% {
+	margin-left: 170px;
+	}
+} */
+
+#pathBox {
+	position: absolute;
+	right: 50%;
+	top: 570px;
+	margin-right: 70px;
+
+	/*animation: pathKick 1.419s infinite;*/
+}
+
+/*@keyframes pathKick {
+	0%, 32%, 100% {
+    margin-right: 70px;
+  }
+  66.6% {
+    margin-right: 120px;
+  }
+} */
+
+/*-------------------Footer-------------------*/
+
+footer {
+	position: relative;
+  	width:100%;
+  	height:60px;
+	bottom: 0;
+	margin-top: 18px;
+	margin-bottom:5px;
+	text-align: center;
+}
+
+.english-footer {
+	font-size: 18px;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #000;
+	margin:0;
+}
+
+.latin-footer {
+	font-style: italic;
+	font-size: 14px;
+	color: #000;
+	text-transform: lowercase;
+	letter-spacing: 4px;
+	margin-top: 2px;
+}
+
+.latinEmail {
+	text-decoration: none;
+	font-style: italic;
+	font-size: 14px;
+	color: #000;
+	text-transform: lowercase;
+	letter-spacing: 4px;
+	margin-top: 2px;
+	width: 100%;
+}
+
+.back, .next {
+	position: absolute;
+	bottom: 0;
+	font-size: 14px;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #000;
+	margin: 5px 0;
+	opacity: .15;
+}
+
+.back, .next {
+	position: absolute;
+	bottom: 0;
+	font-size: 14px;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #000;
+	margin: 5px 0;
+	opacity: .15;
+}
+
+.back {
+	left: 5em;
+}
+
+.next {
+	right: 5em;
+}
+
+.back:hover {
+	opacity: .5;
+}
+
+.next:hover {
+	opacity: .5;
+}
+
+/*--------About----------
+/*--------Page----------*/
+
+
+#aboutPageSection {
+	position: relative;
+	margin: 30px 15% 20px;
+	padding: 0;
+}
+
+
+.mouthClosed {
+	width: 504px;
+	/*height: 30em;*/
+	height: 414px;
+	float: left;
+	background: url(../images/primateSkull.jpg) 0 0 no-repeat;	
+	shape-outside: polygon(50% 0, 70% 62px, 70% 119px, 85% 223px, 90% 227px, 95% 259px, 96% 300px, 87% 406px, 45% 394px);	
+	shape-margin: .8em;
+	background-size: cover;
+	margin: 10px;
+
+}
+
+.mouthOpen {
+	width: 504px;
+	/*height: 30em;*/
+	height: 540px;
+	float: left;
+	background: url(../images/primateSkullMouthOpen.jpg) 0 0 no-repeat;	
+	shape-outside: polygon(50% 0, 70% 62px, 70% 119px, 85% 223px, 90% 227px, 95% 259px, 96% 300px, 55% 324px, 49% 390px, 52% 490px, 56% 490px, 59% 532px, 30% 550px);
+	shape-margin: .8em;
+	background-size: cover;
+	margin: 10px;
+}
+
+.about-paragraph {
+	font-size: 14px;
+}
+
+.gorillaBold {
+	font-weight: 900;
+	font-size: 16px;
+}
+
+.redacted {
+    color: black;
+    background-color: black;
+    box-shadow:1px 0 1px #444;
+    border:1px dotted #555;
+}
+
+.latin-span {
+	font-style: italic;
+	letter-spacing: 2px;
+}
+
+.about-penn {
+	font-size: 12px;
+	text-indent: 2em;
+	text-align: justify;
+
+}
+
+/*--------Portfolio----------*/
+/*--------Page----------*/
+
+#heartAnimation {
+	width: 426px;
+	height: 580px;
+	background: url(../images/heart.jpg) 0 0 no-repeat;
+	margin: 0 auto;
+	position: relative;
+	background-size: cover;
+}
+
+#roxanneLabel {
+	position: absolute;
+	display: block;
+	left: 50%; 
+	top: 130px;
+	margin-left: 120px;
+}
+
+#pikLabel {
+	position: absolute;
+	display: block;
+	right: 50%; 
+	top: 210px;
+	margin-right: 150px;
+}
+
+#aikidoRandoriLabel {
+	position: absolute;
+	display: block;
+	left: 50%; 
+	top: 400px;
+	margin-left: 160px;
+}
+
+#angryRadioLabel {
+	position: absolute;
+	right: 50%;
+	top: 380px;
+	margin-right: 220px;
+}
+
+#lollipopLabel {
+	position: absolute;
+	display: block;
+	left: 50%; 
+	top: 600px;
+	margin-left: 110px;
+}
+
+#squirrelLabel {
+	position: absolute;
+	right: 50%;
+	top: 570px;
+	margin-right: 120px;
+}
+
+/*-------------------Path--------------------*/
+/*-------------------Page-----------------*/
+
+#gorillaSideAnimation {
+	width: 330px;
+	height: 383px;
+	background: url(../animation/sideGorillaWalkAnimation.jpg) 0 0 no-repeat;
+	margin: 50px auto 10px auto;
+	position: relative;
+	background-size: cover;
+}
+
+#path {
+	height: 140px;
+	width: 100%;
+	margin: 20px 0;
+	position: relative;
+	overflow: hidden;
+}
+
+.jobBox {
+	display: inline-block;
+	margin-left: 0;	
+	width: 400px;
+	position: absolute;
+	left: 0;
+	opacity: 0;
+}
+
+.dateBox {
+	top: 15px;
+	font-size: 20px;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: center;
+	color: #000;
+}
+
+.jobCompany {
+	display: block;
+	font-size: 12px;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: center;
+	color: #000;
+	margin:0;
+	text-decoration: none;
+}
+
+.jobTitle {
+	display: block;
+	font-size: 16px;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: center;
+	color: #000;
+	margin:0;
+	text-decoration: none;
+}
+
+.jobLatin {
+	display: block;
+	font-style: italic;
+	font-size: 16px;
+	text-align: center;
+	color: #000;
+	text-transform: lowercase;
+	letter-spacing: 4px;
+	margin: 2px auto;
+	text-decoration: none;
+}
+
+.jobDescription {
+	display: block;
+	font-size: 14px;
+	font-weight: 200;
+	text-align: center;
+	color: #000;
+	margin:0;
+	text-decoration: none;
+}
