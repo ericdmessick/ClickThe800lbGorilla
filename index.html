@@ -1,0 +1,263 @@
+<!DOCTYPE html> 
+
+<html lang="en"> 
+		
+	<head> 
+		<meta charset="utf-8" />
+		<meta name="description" content="Click the 800lb Gorilla!" /> 
+		<meta name="keywords" content="Eric Messick, Web Developement, Resume, Portfolio" /> 
+		<!-- <meta name="viewport" content="initial-scale=1.0, width=device-width"/> -->
+		<title>Click The 800 Pound Gorilla</title> 
+		<link rel="stylesheet" href="css/style.css"/>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="js/jquery.spritely.js"></script>
+	</head>
+
+	<body>
+
+		<header>
+
+			<h1>Eric Messick.</h1>
+
+			<hr/>
+	    
+			<h4>(&nbsp;<span>gorillus clickitus</span>&nbsp;)</h4>
+				<!--I had forgotten why I used a span to do this.  It is beecause I don't want the "word to break" at the paranths.-->
+				<!--  Adjusting just the spacing with CSS made the paranths "stick" to the preceeding or following letter.-->
+		</header>
+
+		<main ID="mainContainer">
+			<div ID="gorillaAnimation" title="Click the 800lb Gorilla">
+				<input type="checkbox" id="skullCheck" title="Fedora?"> <!--THESE ARE THE INVISIBLE CHECKBOXES OVER THE SKELETON-->
+				<input type="checkbox" id="mouthCheck" title="Cigarette?">
+				<input type="checkbox" id="ribCageCheck" title="Tie?">
+				<input type="checkbox" id="hipsCheck" title="Gun Belt?">
+				<input type="checkbox" id="handsCheck" title="Boxing Gloves?">
+				<div ID="skull"></div>  <!--THESE ARE THE DIVS THAT DISPLAY THE SPRITE ANIMATIONS THAT GO WITH THE CHECKBOXES-->
+				<div ID="mouth"></div>
+				<div ID="hips"></div>
+				<div ID="ribCage"></div>
+				<div ID="hands"></div>
+			</div>
+      
+			<div ID="aboutBox" class="navBoxes">
+				<a class="english" href="about.html">About.</a>
+				<hr/>
+				<p class="latin">(&nbsp;<span>meus meus meus</span>&nbsp;)</p>
+			</div>
+
+			<div ID="portfolioBox" class="navBoxes">
+				<a class="english" href="portfolio.html">Portfolio.</a>
+				<hr/>
+				<p class="latin">(&nbsp;<span>passionus sofarus</span>&nbsp;)</p>
+			</div>
+
+			<div ID="highFiveBox" class="navBoxes">
+				<a class="english" href="mailto:eric@clickthe800lbgorilla.com?subject=The Year of the Monkey is Near!" target="_blank">High Five.</a>
+				<hr/>
+				<p class="latin">(&nbsp;<span>whatupae manus</span>&nbsp;)</p>
+			</div>
+
+			<div ID="pathBox" class="navBoxes">
+				<a class="english" href="path.html">Path.</a>
+				<hr/>
+				<p class="latin">(&nbsp;<span>corriculum vitae</span>&nbsp;)</p>
+			</div>
+		</main>
+
+		<footer>
+			<div>
+				<p>Web Developer.</p>
+				<hr/>
+				<p class="latin">(&nbsp;<span>casses factorem</span>&nbsp;)</p>
+			</div>
+		</footer>
+
+		
+		<script type="text/javascript">
+				
+				$(document).ready(function() {
+				
+				//-----------------------------Translate funtion---------------------
+					
+					translate();
+					
+					function translate() {
+						
+						//Header translate
+						$("header").mouseenter(function () {
+							var that = $(this).find("h4 span");
+							$(that).fadeOut(500, function () {
+								$(that).html('Click the 800lb Gorilla');
+							});
+							$(that).fadeIn(500);
+
+						});
+						$("header").mouseleave(function () {
+							var that = $(this).find("h4 span");
+							$(that).fadeOut(500, function () {
+								$(that).html('gorillus clickitus');
+							});
+							$(that).fadeIn(500);
+
+						});
+
+						//About translate
+						$("#aboutBox").mouseenter(function () {
+							var that = $(this).find("p.latin span");
+							$(that).fadeOut(500, function () {
+								$(that).html('me me me me me');
+							});
+							$(that).fadeIn(500);
+
+						});
+						$("#aboutBox").mouseleave(function () {
+							var that = $(this).find("p.latin span");
+							$(that).fadeOut(500, function () {
+								$(that).html('meus meus meus');
+							});
+							$(that).fadeIn(500);
+
+						});
+						
+						//Portfolio translate
+						$("#portfolioBox").mouseenter(function () {
+							var that = $(this).find("p.latin span");
+							$(that).fadeOut(500, function () {
+								$(that).html('sweet heart fruit');
+							});
+							$(that).fadeIn(500);
+
+						});
+						$("#portfolioBox").mouseleave(function () {
+							var that = $(this).find("p.latin span");
+							$(that).fadeOut(500, function () {
+								$(that).html('passionus sofarus');
+							});
+							$(that).fadeIn(500);
+
+						});
+						
+						//Contact translate
+						$("#highFiveBox").mouseenter(function () {
+							var that = $(this).find("p.latin span");
+							$(that).fadeOut(500, function () {
+								$(that).html('electro high five');
+							});
+							$(that).fadeIn(500);
+
+						});
+						$("#highFiveBox").mouseleave(function () {
+							var that = $(this).find("p.latin span");
+							$(that).fadeOut(500, function () {
+								$(that).html('whatupae manus');
+							});
+							$(that).fadeIn(500);
+
+						});
+						
+						//Path translate
+						$("#pathBox").mouseenter(function () {
+							var that = $(this).find("p.latin span");
+							$(that).fadeOut(500, function () {
+								$(that).html('path of life, man');
+							});
+							$(that).fadeIn(500);
+
+						});
+						$("#pathBox").mouseleave(function () {
+							var that = $(this).find("p.latin span");
+							$(that).fadeOut(500, function () {
+								$(that).html('corriculum vitae');
+							});
+							$(that).fadeIn(500);
+
+						});
+						
+						//Footer translate
+						$("footer").mouseenter(function () {
+							var that = $(this).find("p.latin span");
+							$(that).fadeOut(500, function () {
+								$(that).html('website maker');
+							});
+							$(that).fadeIn(500);
+
+						});
+						$("footer").mouseleave(function () {
+							var that = $(this).find("p.latin span");
+							$(that).fadeOut(500, function () {
+								$(that).html('cassus factorem');
+							});
+							$(that).fadeIn(500);
+
+						});
+					};
+						
+				//-----------------------------Translate Funtion End------------------
+
+
+					setTimeout(function() { //Trying to delay the entire JS from starting until all elements are loaded.  The timeing is messed up otherwise.
+      
+						
+						$("#gorillaAnimation").sprite({fps: 20, no_of_frames: 27});
+						$("#skull").sprite({fps: 20, no_of_frames: 27});
+						$("#mouth").sprite({fps: 20, no_of_frames: 27});
+						$("#ribCage").sprite({fps: 20, no_of_frames: 27});
+						$("#hips").sprite({fps: 20, no_of_frames: 27});
+						$("#hands").sprite({fps: 20, no_of_frames: 27});
+
+						aboutAnimate();
+						portfolioAnimate();
+						//this is Awesome!  I want the the first time the animation starts it's loop to wait a fraction of a second so its time correctly.  With out this, my first attempt used a "sectional loop" and gave me a choppy pause at one point.  I'm goint to keep the original code in here so that you can comment out the setTimeout and skillAnimate function, then uncomment the original function and its call.  You will see what I mean:)This very same effect couldn't be accomplished by how I coded the pathAnimate Function, by setting the delay with in the function.  This is because the the gorilla animation is 1.35 second long.  All the animations timing on all the boxes add up to 1.35.  The problem was that the highFiveBox would have had a VERY long delay before moving.  This meant I would have to shorted the rest of the animation to keep the loop at 1.35 sec.  The solutioin was to set the animation at 1.35 using a short delay with in the animation.  Then, delay the entire animation.
+						setTimeout(function() { highFiveAnimate(); }, 525);
+						// skillAnimate();
+						pathAnimate();
+
+						function aboutAnimate() {
+
+							if (window.innerWidth > 700){
+
+								$("#aboutBox").delay(432).animate({"margin-left": "90px"}, 432).animate({"margin-left": "80px"}, 486, aboutAnimate);
+							} else {
+								$("#aboutBox").animate({"margin-left": "8%"}, 1350, aboutAnimate);
+							}
+						}
+
+						function portfolioAnimate() {
+
+							if (window.innerWidth > 700){
+
+								$("#portfolioBox").animate({"margin-right": "100px"}, 486).delay(432).animate({"margin-right": "120px"}, 432, portfolioAnimate);
+							} else {
+								$("#portfolioBox").animate({"margin-right": "15%"}, 1350, portfolioAnimate);
+							}
+						}
+
+						function highFiveAnimate() {
+
+							if (window.innerWidth > 700){
+
+								$("#highFiveBox").delay(432).animate({"margin-left": "170px"}, 432).animate({"margin-left": "140px"}, 486, highFiveAnimate);
+							} else {
+								$("#highFiveBox").animate({"margin-left": "20%"}, 1350, highFiveAnimate);
+							}
+						}
+
+						function pathAnimate() {
+
+							if (window.innerWidth > 700){
+
+								$("#pathBox").delay(432).animate({"margin-right": "120px"}, 432).animate({"margin-right": "70px"}, 486, pathAnimate);
+							} else {
+								$("#pathBox").animate({"margin-left": "8%"}, 1350, pathAnimate);
+							}
+						}
+    				}, 3000); /*------------------------THIS IS WHERE THE DELAY FOR THE ENTIRE FUNCTION IS SET (LIVE 98)*/
+				});
+		</script>
+	</body>
+	
+	
+
+</html>

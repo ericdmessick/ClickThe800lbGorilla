@@ -1,0 +1,757 @@
+/*
+----------------------------Some Univeral Styles------------------*/
+
+body {
+	position: relative;
+	font-family: serif;
+	font-size: 18px;
+	line-height: 1.5;
+	margin: 5px 10px 5px 10px; 
+	border: 5px;
+	padding: 5px;
+	background: #FFF;
+	min-height: 100%;
+}
+
+#mainContainer {
+	position: relative;
+	margin: 30px auto 0;
+	height: 580px;
+	padding: 5px;
+}
+
+hr {
+	margin: 0 auto;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+.hide {
+	display: none;
+}
+
+/*
+a[title]:hover:after {
+	content: attr(title);
+	font-style: italic;
+	font-size: .66em;
+	text-align: center;
+	color: #000;
+	text-transform: lowercase;
+	letter-spacing: 4px;
+	padding: 4px 8px;
+	color: #333;
+	position: absolute;
+	left: 0;
+	top: 100%;
+	white-space: nowrap;
+	z-index: 20px;
+}
+*/
+
+/*
+-------------------MY SPECIALS---------------*/
+
+.spacing {
+	letter-spacing: 10px;
+}
+
+
+/*-------------------MAIN--------------------*/
+/*------------------Gorilla-----------------*/
+/*-----------------Animation-----------------*/
+
+#gorillaAnimation {
+	width: 500px;
+	height: 580px;
+	background: url(../animation/gorillaAnimationOpt.jpg) 0 0 no-repeat;
+	margin: 0 auto;
+	position: relative;
+	background-size: cover;
+}
+
+/*-------------------Overlays--------------------*/
+/*------------------Check Boxes----------------*/
+/*---------------------and--------------------*/
+/*--------------------Sprites--------------------*/
+
+#skull, #mouth, #ribCage, #hips, #hands {
+	position: absolute;
+	width: 500px;
+	height: 580px;
+	margin: 0 auto;
+	visibility: hidden;
+}
+
+#skull {
+	background: url(../animation/fedoraAnimationOpt.png) 0 0 no-repeat;
+	background-size: cover;
+	height: 120px;
+}
+
+#mouth {
+	background: url(../animation/longCigaretteAnimationOpt.png) 0 0 no-repeat;
+	background-size: cover;
+	top: 110px;
+	height: 44px;
+}
+
+#ribCage {
+	background: url(../animation/redStripeTieAnimationOpt.png) 0 0 no-repeat;
+	background-size: cover;
+	top: 115px;
+	height: 250px;
+}
+
+#hips {
+	background: url(../animation/gunBeltAnimationOpt.png) 0 0 no-repeat;
+	background-size: cover;
+	top: 260px;
+	height: 141px;
+}
+
+#hands {
+	background: url(../animation/boxingGlovesAnimationOpt.png) 0 0 no-repeat;
+	background-size: cover;
+	top: 250px;
+	height: 251px;
+}
+
+input#skullCheck[type=checkbox] {
+	top: 25px;
+	left: 28%;
+	z-index: 100;
+	width: 200px;
+	height: 50px;
+	position: absolute;  
+   	opacity: 0;
+}
+
+input#skullCheck[type=checkbox]:checked ~ #skull {
+   visibility: visible;
+}
+
+input#mouthCheck[type=checkbox] {
+	top: 70px;
+   	left: 30%;
+   	z-index: 100;
+   	width: 180px;
+   	height: 50px;
+   	position: absolute;  
+   	opacity: 0;
+}
+
+input#mouthCheck[type=checkbox]:checked ~ #mouth {
+   	visibility: visible;
+}
+
+input#ribCageCheck[type=checkbox] {
+   	top: 135px;
+   	left: 30%;
+   	z-index: 100;
+   	width: 180px;
+   	height: 120px;
+   	position: absolute;  
+   	opacity: 0;
+}
+
+input#ribCageCheck[type=checkbox]:checked ~ #ribCage {
+   	visibility: visible;
+}
+
+input#hipsCheck[type=checkbox] {
+   	top: 270px;
+   	left: 35%;
+   	z-index: 100;
+   	width: 140px;
+   	height: 70px;
+   	position: absolute;  
+   	opacity: 0;
+}
+
+input#hipsCheck[type=checkbox]:checked ~ #hips {
+   	visibility: visible;
+}
+
+input#handsCheck[type=checkbox] {
+   	top: 320px;
+   	left: 10%;
+   	z-index: 100;
+   	width: 100px;
+   	height: 140px;
+   	position: absolute;  
+   	opacity: 0;
+}
+
+input#handsCheck[type=checkbox]:checked ~ #hands {
+   	visibility: visible;
+}
+
+/*
+-------------------HEADER--------------------*/
+
+header {
+	margin: 10px auto 0;
+	padding: 10px;
+}
+
+h1 {
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: center;
+	color: #000;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+
+header hr {
+	margin-top:0;
+	margin-bottom: 0;
+	margin-left: auto;
+	margin-right: auto;
+	width: 30%;
+}
+
+h4 {
+	font-style: italic;
+	font-size: .77em;
+	font-weight: normal;
+	text-align: center;
+	color: #000;
+	text-transform: lowercase;
+	letter-spacing: 4px;
+	margin-top: 4px;
+	margin-bottom: 14px;
+}
+
+/*
+---------------------Main Contents---------------*/
+
+#diagram {
+	width: 260px;
+	height: 570px;
+	margin: 0 auto;
+	padding: 0;
+}
+
+/*
+---------------------Nav Boxes--------------------*/
+
+#aboutBox {
+	position: absolute;
+	display: block;
+	left: 50%; 
+	top: 44px;
+	margin-left: 80px;
+}
+
+#portfolioBox {
+	position: absolute;
+	display: block;
+	right: 50%; 
+	top: 144px;
+	margin-right: 130px;
+}
+
+#highFiveBox {
+	position: absolute;
+	display: block;
+	left: 50%; 
+	top: 314px;
+	margin-left: 140px;
+}
+
+#pathBox {
+	position: absolute;
+	right: 50%;
+	top: 484px;
+	margin-right: 70px;
+}
+
+.english {
+	display: block;
+	font-size: .88em;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: center;
+	color: #000;
+	margin:0;
+	text-decoration: none;
+}
+
+@media only screen and (min-width: 650px) and (max-width: 1000px) {
+	.english {
+		font-size: .85em
+	}
+}
+
+.navBox hr {
+	margin: 0 auto;
+	width: 75%
+}
+
+.latin {
+	display: block;
+	font-style: italic;
+	font-size: .66em;
+	text-align: center;
+	color: #000;
+	text-transform: lowercase;
+	letter-spacing: 4px;
+	margin-top: 2px;
+	text-decoration: none;
+}
+
+@media only screen and (min-width: 650px) and (max-width: 1000px) {
+	.latin {
+		font-size: .60em
+	}
+}
+
+
+/*-------------------Footer-------------------*/
+
+footer {
+	position: relative;
+  	width:100%;
+  	height:60px;
+	bottom: 0;
+	margin-top: 85px;
+	margin-bottom:5px;
+	text-align: center;
+}
+
+footer p:first-of-type {
+	font-size: 1em;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #000;
+	margin:0;
+}
+
+footer hr {
+	width: 50%;
+}
+
+footer p:last-of-type {
+	font-style: italic;
+	font-size: .77em;
+	color: #000;
+	text-transform: lowercase;
+	letter-spacing: 4px;
+	margin-top: 2px;
+}
+
+.back, .next {
+	position: absolute;
+	bottom: 0;
+	font-size: .77em;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #000;
+	margin: 5px 0;
+	opacity: .15;
+}
+
+.back {
+	left: 5em;
+}
+
+.next {
+	right: 5em;
+}
+
+.back:hover {
+	opacity: .5;
+}
+
+.next:hover {
+	opacity: .5;
+}
+
+
+/*
+------------------------About Page--------------------------*/
+
+
+#aboutPageSection {
+	position: relative;
+	margin: 30px 10% 20px;
+	padding: 0;
+}
+
+
+.mouthClosed {
+	width: 504px;
+	height: 414px;
+	float: left;
+	background: url(../images/primateSkull.jpg) 0 0 no-repeat;	
+	shape-outside: polygon(50% 0, 70% 62px, 70% 119px, 85% 223px, 90% 227px, 95% 259px, 96% 300px, 87% 406px, 45% 394px);	
+	shape-margin: .8em;
+	background-size: cover;
+	margin: 10px;
+
+}
+
+.mouthOpen {
+	width: 504px;
+	height: 540px;
+	float: left;
+	background: url(../images/primateSkullMouthOpen.jpg) 0 0 no-repeat;	
+	shape-outside: polygon(50% 0, 70% 62px, 70% 119px, 85% 223px, 90% 227px, 95% 259px, 96% 300px, 55% 324px, 49% 390px, 52% 490px, 56% 490px, 59% 532px, 30% 550px);
+	shape-margin: .8em;
+	background-size: cover;
+	margin: 10px;
+}
+
+.about-paragraph {
+	font-size: 14px;
+}
+
+.gorillaBold {
+	font-weight: 900;
+	font-size: 1.15em;
+}
+
+.redacted {
+    color: black;
+    background-color: black;
+    box-shadow:1px 0 1px #444;
+    border:1px dotted #555;
+}
+
+.latin-span {
+	font-style: italic;
+	letter-spacing: 2px;
+}
+
+.about-penn {
+	font-size: 12px;
+	text-indent: 2em;
+	text-align: justify;
+
+}
+
+
+/*
+------------------------Portfolio Page--------------------------*/
+
+
+#heartAnimation {
+	width: 426px;
+	height: 580px;
+	background: url(../images/heart.jpg) 0 0 no-repeat;
+	margin: 0 auto;
+	position: relative;
+	background-size: cover;
+}
+
+/*
+-------------------------------Portfolio------------------------------------
+-------------------------------Left Side----------------------------------*/
+
+#pikLabel {
+	position: absolute;
+	display: block;
+	right: 50%; 
+	top: 54px;
+	margin-right: 15%;
+	width: 172px;
+}
+
+#spineLabel {
+	position: absolute;
+	display: block;
+	right: 50%; 
+	top: 194px;
+	margin-right: 21%;
+	width: 172px;
+}
+
+#angryRadioLabel {
+	position: absolute;
+	right: 50%;
+	top: 334px;
+	margin-right: 20%;
+	width: 200px;
+}
+
+#squirrelLabel {
+	position: absolute;
+	right: 50%;
+	top: 468px;
+	margin-right: 12%;
+	width: 232px;
+}
+
+@media only screen and (min-width: 650px) and (max-width: 1000px) {
+	
+	#pikLabel {
+		margin-right: 21%;
+		width: 166px;
+		top: 56px;
+	}
+	
+	#angryRadioLabel {
+		margin-right: 19%;
+		width: 188px;
+		top: 474px;
+	}
+	
+	#squirrelLabel {
+		margin-right: 9%;
+		width: 252px;
+		top: 567px;
+	}
+	
+	#spineLabel {
+		margin-right: 23%;
+		width: 166px;
+		top: 147px;
+	}
+}
+
+
+/*
+-------------------------------Portfolio------------------------------------
+-------------------------------Right Side----------------------------------*/
+
+#dadsrboringLabel {
+	position: absolute;
+	display: block;
+	left: 50%; 
+	top: 0;
+	margin-left: 12%;
+	text-align: center;
+	width: 180px;
+}
+
+#roxanneLabel {
+	position: absolute;
+	display: block;
+	left: 50%; 
+	top: 126px;
+	margin-left: 19%;
+	text-align: center;
+	width: 180px;
+}
+
+#rydiaLabel {
+	position: absolute;
+	display: block;
+	left: 50%;
+	top: 254px;
+	margin-left: 24%;
+	width: 172px;
+}
+
+#aikidoRandoriLabel {
+	position: absolute;
+	display: block;
+	left: 50%;
+	top: 396px;
+	margin-left: 17%;
+	width: 180px;
+}
+
+#lollipopLabel {
+	position: absolute;
+	display: block;
+	left: 50%; 
+	top: 536px;
+	margin-left: 10%;
+	width: 230px;
+}
+
+@media only screen and (min-width: 650px) and (max-width: 1000px) {
+	
+	#dadsrboringLabel {
+		margin-left: 17%;
+		top: -6px;
+		width: 164px;
+	}
+
+	#roxanneLabel {
+		margin-left: 19%;
+		top: 73px;
+		width: 172px;
+	}
+
+
+	#aikidoRandoriLabel {
+		margin-left: 21%;
+		top: 440px;
+		width: 172px;
+	}
+
+
+	#lollipopLabel {
+		margin-left: 14%;
+		width: 250px;
+	}
+
+
+	#rydiaLabel {
+		margin-left: 24%;
+		top: 284px;
+		width: 164px;
+	}
+	
+}
+
+
+/*
+--------------------------------------Path Page------------------------------------*/
+
+#gorillaSideAnimation {
+	width: 330px;
+	height: 383px;
+	background: url(../animation/sideGorillaWalkAnimation.jpg) 0 0 no-repeat;
+	margin: 50px auto 10px auto;
+	position: relative;
+	background-size: cover;
+}
+
+#path {
+	height: 140px;
+	width: 100%;
+	margin: 20px 0;
+	position: relative;
+	overflow: hidden;
+}
+
+.jobBox {
+	display: inline-block;
+	margin-left: 0;	
+	width: 400px;
+	position: absolute;
+	left: 0;
+	opacity: 0;
+}
+
+.dateBox {
+	top: 15px;
+	font-size: 1.11em;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: center;
+	color: #000;
+}
+
+.jobCompany {
+	display: block;
+	font-size: .66em;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: center;
+	color: #000;
+	margin:0;
+	text-decoration: none;
+}
+
+.jobTitle {
+	display: block;
+	font-size: .88em;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: center;
+	color: #000;
+	margin:0;
+	text-decoration: none;
+}
+
+.jobLatin {
+	display: block;
+	font-style: italic;
+	font-size: .88em;
+	text-align: center;
+	color: #000;
+	text-transform: lowercase;
+	letter-spacing: 4px;
+	margin: 2px auto;
+	text-decoration: none;
+}
+
+.jobDescription {
+	display: block;
+	font-size: .77em;
+	font-weight: 200;
+	text-align: center;
+	color: #000;
+	margin:0;
+	text-decoration: none;
+}
+
+/*----------------RESPONSIVE---------------*/
+/*-----------------MEDIA-------------------*/
+/*-----------------QUERIES-----------------*/
+
+/*-------------RESPONSIVE ABOUT PAGE------------*/
+
+
+
+/*@media only screen and (max-width: 650px) {
+
+	hr.thirtyPercent {
+		width: 80%;
+	}
+
+	hr.fiftyPercent {
+		width: 60%;
+	}
+	
+	#roxanneLabel {
+		margin-top: 20px;
+		margin-left: 0;
+		position: relative;
+		width: 100%;
+		text-align: center;
+		top: 0;
+		left: 0;
+	}
+
+	#pikLabel, #aikidoRandoriLabel, #angryRadioLabel, 
+	#lollipopLabel, #squirrelLabel {
+		margin-top: 20px;
+		margin-left: 0;
+		position: relative;
+		width: 100%;
+		text-align: center;
+		top: 0;
+		left: 0;
+	}
+
+	#roxanneLabel > hr, #pikLabel > hr, #aikidoRandoriLabel > hr, #angryRadioLabel > hr, 
+	#lollipopLabel > hr, #squirrelLabel > hr {
+		width: 30%;
+	}
+
+
+
+@media only screen and (max-width: 700px) {
+
+ 	#aboutBox {
+		margin-left: 8%;
+ 	}
+
+	#portfolioBox {
+		margin-right: 15%;	
+	}
+
+	#highFiveBox {
+		margin-left: 20%;
+	}
+
+	#pathBox {
+		margin-left: 8%;
+	}*/
+
+	
+
+
+
+

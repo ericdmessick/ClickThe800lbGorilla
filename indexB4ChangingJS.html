@@ -1,0 +1,152 @@
+<!DOCTYPE html> 
+
+<html lang="en"/> 
+		
+	<head> 
+		<meta charset="utf-8" />
+		<meta name="description" content="Click the 800lb Gorilla!" /> 
+		<meta name="keywords" content="Eric Messick, Web Developement, Resume, Portfolio" /> 
+		<meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+		<title>Click The 800 Pound Gorilla</title> 
+		<link rel="stylesheet" href="css/style.css"/>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="js/jquery.spritely.js"></script>
+	</head>
+
+	<body>
+
+		<header>
+
+			<h1>Eric Messick.</h1>
+
+			<hr style="width:30%"/>
+	    
+			<h4><span class="spacing">(</span>gorillus clickitu<span>s)</span></h4>
+			
+		</header>
+
+		<section ID="mainContainer">
+			<div ID="gorillaAnimation" title="800 lb Gorilla">
+				<input type="checkbox" id="skullCheck">
+				<input type="checkbox" id="mouthCheck">
+				<input type="checkbox" id="ribCageCheck">
+				<input type="checkbox" id="hipsCheck">
+				<input type="checkbox" id="handsCheck">
+				<div ID="skull"></div>
+				<div ID="mouth"></div>
+				<div ID="hips"></div>
+				<div ID="ribCage"></div>
+				<div ID="hands"></div>
+			</div>
+      
+			<div ID="aboutBox">
+				<a href="about.html" class="english-right">About.</a>
+				<hr class="right"/>
+				<p class="latin-right"><span class="spacing">(</span>meus meus meu<span class="spacing">s)</span></p>
+			</div>
+
+			<div ID="portfolioBox">
+				<a href="portfolio.html" class="english-left">Portfolio.</a>
+				<hr class="left"/>
+				<p class="latin-left"><span class="spacing">(</span>passionus sofaru<span class="spacing">s)</span></p>
+			</div>
+
+			<div ID="highFiveBox">
+				<a href="mailto:eric@clickthe800lbgorilla.com?subject=The Year of the Monkey is Near!" class="english-right">High Five.</a>
+				<hr class="right"/>
+				<p class="latin-right"><span class="spacing">(</span>whatupae brou<span class="spacing">s)</span></p>
+			</div>
+
+			<div ID="pathBox">
+				<a href="path.html" class="english-left">Path.</a>
+				<hr class="left"/>
+				<p class="latin-left"><span class="spacing">(</span>corriculum vita<span class="spacing">e)</span></p>
+			</div>
+		</section>
+
+		<footer>
+			<div>
+				<p class="english-footer">Web Developer.</p>
+				<hr style="width:50%"/>
+				<p class="latin-footer">( casses factorem )</p>
+			</div>
+		</footer>
+
+		
+		<script type="text/javascript">
+				(function($) {
+					$(document).ready(function() {
+						
+						$("#gorillaAnimation").sprite({fps: 20, no_of_frames: 27});
+						$("#skull").sprite({fps: 20, no_of_frames: 27});
+						$("#mouth").sprite({fps: 20, no_of_frames: 27});
+						$("#ribCage").sprite({fps: 20, no_of_frames: 27});
+						$("#hips").sprite({fps: 20, no_of_frames: 27});
+						$("#hands").sprite({fps: 20, no_of_frames: 27});
+
+						aboutAnimate();
+						portfolioAnimate();
+						//this is Awesome!  I want the the first time the animation starts it's loop to wait a fraction of a second so its time correctly.  With out this, my first attempt used a "sectional loop" and gave me a choppy pause at one point.  I'm goint to keep the original code in here so that you can comment out the setTimeout and skillAnimate function, then uncomment the original function and its call.  You will see what I mean:)This very same effect couldn't be accomplished by how I coded the pathAnimate Function, by setting the delay with in the function.  This is because the the gorilla animation is 1.35 second long.  All the animations timing on all the boxes add up to 1.35.  The problem was that the highFiveBox would have had a VERY long delay before moving.  This meant I would have to shorted the rest of the animation to keep the loop at 1.35 sec.  The solutioin was to set the animation at 1.35 using a short delay with in the animation.  Then, delay the entire animation.
+						setTimeout(function() { highFiveAnimate(); }, 525);
+						// skillAnimate();
+						pathAnimate();
+
+						function aboutAnimate() {
+
+							if (window.innerWidth > 700){
+
+								$("#aboutBox").delay(432).animate({"margin-left": "90px"}, 432).animate({"margin-left": "80px"}, 486, aboutAnimate);
+							} else {
+								$("#aboutBox").animate({"margin-left": "8%"}, 1350, aboutAnimate);
+							}
+						}
+
+						function portfolioAnimate() {
+
+							if (window.innerWidth > 700){
+
+								$("#portfolioBox").animate({"margin-right": "100px"}, 486).delay(432).animate({"margin-right": "120px"}, 432, portfolioAnimate);
+							} else {
+								$("#portfolioBox").animate({"margin-right": "15%"}, 1350, portfolioAnimate);
+							}
+						}
+
+						function highFiveAnimate() {
+
+							if (window.innerWidth > 700){
+
+								$("#highFiveBox").delay(432).animate({"margin-left": "170px"}, 432).animate({"margin-left": "140px"}, 486, highFiveAnimate);
+							} else {
+								$("#highFiveBox").animate({"margin-left": "20%"}, 1350, highFiveAnimate);
+							}
+						}
+
+
+						//This was the original function
+						// function skillAnimate() {
+
+						// 	$("#skillBox").animate({"margin-left": "140px"}, 262).delay(432).animate({"margin-left": "170px"}, 432).animate({"margin-left": "155px"}, 262, skillAnimate);
+						// }
+
+						function pathAnimate() {
+
+							if (window.innerWidth > 700){
+
+								$("#pathBox").delay(432).animate({"margin-right": "120px"}, 432).animate({"margin-right": "70px"}, 486, pathAnimate);
+							} else {
+								$("#pathBox").animate({"margin-left": "8%"}, 1350, pathAnimate);
+							}
+						}
+
+						// $("#portfolioBox").animate({"margin-right": "100px"}), (432, "ease", function() {
+						// 	$("#aboutBox").delay(432).animate({"margin-right": "120px"}), (486, linear);
+						// });
+					});
+				})(jQuery);
+		</script>
+	</body>
+	
+	
+
+</html>
